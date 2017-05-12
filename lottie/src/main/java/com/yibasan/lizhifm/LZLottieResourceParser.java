@@ -123,17 +123,21 @@ public class LZLottieResourceParser {
                 if (zipItem == null)
                     break;
                 File file = new File(cacheDir, zipItem.getName());
-                FileOutputStream fileOutputStream = new FileOutputStream(file);
-                byte[] buff = new byte[2048];
-                while (true) {
-                    int readBytes = zipInputStream.read(buff);
-                    if (readBytes <= 0) {
-                        break;
+                if (zipItem.isDirectory()) {
+                    file.mkdir();
+                } else {
+                    FileOutputStream fileOutputStream = new FileOutputStream(file);
+                    byte[] buff = new byte[2048];
+                    while (true) {
+                        int readBytes = zipInputStream.read(buff);
+                        if (readBytes <= 0) {
+                            break;
+                        }
+                        fileOutputStream.write(buff, 0, readBytes);
                     }
-                    fileOutputStream.write(buff, 0, readBytes);
+                    fileOutputStream.close();
+                    zipInputStream.closeEntry();
                 }
-                fileOutputStream.close();
-                zipInputStream.closeEntry();
             }
             zipInputStream.close();
         } catch (IOException e) {

@@ -36,7 +36,7 @@ public class SvgaMovieFragment extends BaseFragment {
         svgaImageView.setBackgroundColor(0x80000000);
         SVGAParser parser = new SVGAParser(getActivity());
         try {
-            parser.parse(new URL("http://192.168.24.245:8008/posche.svga?time=" + System.currentTimeMillis()), new SVGAParser.ParseCompletion() {
+            parser.parse(new URL("http://192.168.24.245:8008/posche.svga?time=" + time), new SVGAParser.ParseCompletion() {
                 @Override
                 public void onComplete(@NotNull SVGAVideoEntity videoItem) {
                     Log.i("SvgaMovieFragment", "onCreateView videoItem = " + videoItem);

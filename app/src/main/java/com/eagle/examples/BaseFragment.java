@@ -11,6 +11,14 @@ import android.view.View;
 
 public class BaseFragment extends Fragment {
 
+    protected long time;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        time = getArguments() != null ? getArguments().getLong("time") : 0;
+    }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -71,5 +71,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        exampleList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Class<? extends Fragment> clazz = (Class<? extends Fragment>) parent.getAdapter().getItem(position);
+                long time = System.currentTimeMillis();
+                Log.i("MainActivity", "onItemLongClick fragment = " + clazz.getSimpleName() + ", time = " + time);
+                try {
+                    Fragment fragment = clazz.newInstance();
+                    Bundle args = new Bundle();
+                    args.putLong("time", time);
+                    fragment.setArguments(args);
+                    getSupportFragmentManager().beginTransaction().add(android.R.id.content, fragment, clazz.getSimpleName()).show(fragment).addToBackStack(clazz.getSimpleName()).commitAllowingStateLoss();
+                } catch (Exception e) {
+                    Log.e("MainActivity", "onItemLongClick fragment = " + clazz.getSimpleName(), e);
+                }
+                return true;
+            }
+        });
     }
 }

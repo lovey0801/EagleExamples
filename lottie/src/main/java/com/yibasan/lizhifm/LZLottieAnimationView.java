@@ -3,11 +3,11 @@ package com.yibasan.lizhifm;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.airbnb.lottie.LottieAnimationView;
 
 import java.io.File;
-import java.net.URL;
 
 /**
  * Created by Eagle on 2017/5/12.
@@ -32,10 +32,12 @@ public class LZLottieAnimationView extends LottieAnimationView {
         parser.parse(url, new LZLottieResourceParser.ParseCompletion() {
             @Override
             public void onComplete(final String animationName) {
+                Log.i(getClass().getSimpleName(), "setURLAnimation name=" + animationName);
                 post(new Runnable() {
                     @Override
                     public void run() {
                         String folder = new File(new File(animationName).getParentFile(), "images").getAbsolutePath();
+                        Log.i(getClass().getSimpleName(), "setURLAnimation name=" + animationName + ", folder=" + folder);
                         setFileAnimation(animationName,  folder);
                     }
                 });
