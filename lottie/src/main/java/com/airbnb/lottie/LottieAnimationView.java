@@ -317,7 +317,7 @@ public class LottieAnimationView extends AppCompatImageView {
 
     @SuppressWarnings("WeakerAccess")
     public void setFileAnimation(String fileName, String imagesFolder) {
-        setAnimation(fileName, imagesFolder, LottieComposition.LOTTIE_TYPE_ASSETS, defaultCacheStrategy);
+        setAnimation(fileName, imagesFolder, LottieComposition.LOTTIE_TYPE_FILES, defaultCacheStrategy);
     }
 
     /**
