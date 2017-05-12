@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EagleExamples.iml" filepath="$PROJECT_DIR$/EagleExamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottie/lottie.iml" filepath="$PROJECT_DIR$/lottie/lottie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/svga-player/svga-player.iml" filepath="$PROJECT_DIR$/svga-player/svga-player.iml" />
+    </modules>
+  </component>
+</project>
