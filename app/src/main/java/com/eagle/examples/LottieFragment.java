@@ -32,7 +32,7 @@ public class LottieFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lottie, null);
         unbinder = ButterKnife.bind(this, view);
-        animationView.setComposition(LottieComposition.Factory.fromFileSync(getActivity(), "/sdcard/183/ring/data.json"));
+        animationView.setComposition(LottieComposition.Factory.fromFileSync(getActivity(), "/sdcard/183/ring/data.json"), "/sdcard/183/ring/images");
         animationView.loop(true);
         animationView.playAnimation();
 

@@ -7,21 +7,22 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-import static junit.framework.Assert.assertNotNull;
+class ImageFileBitmapManager extends AbstractImageBitmapManager {
 
-class ImageAssetBitmapManager extends AbstractImageBitmapManager {
 
-    ImageAssetBitmapManager(Drawable.Callback callback, String imagesFolder,
-                            ImageDelegate assetDelegate, Map<String, LottieImage> imageAssets) {
+    ImageFileBitmapManager(Drawable.Callback callback, String imagesFolder,
+                           ImageDelegate assetDelegate, Map<String, LottieImage> imageAssets) {
         super(callback, imagesFolder, assetDelegate, imageAssets);
     }
 
     @Override
     protected InputStream openImageInputStream(String fileName) throws IOException {
-        return context.getAssets().open(imagesFolder + fileName);
+        return new FileInputStream(new File(imagesFolder, fileName));
     }
 }

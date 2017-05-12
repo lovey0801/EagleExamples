@@ -5,8 +5,8 @@ import android.graphics.Bitmap;
 /**
  * Delegate to handle the loading of bitmaps that are not packaged in the assets of your app.
  *
- * @see LottieDrawable#setImageAssetDelegate(ImageAssetDelegate)
+ * @see LottieDrawable#setImageDelegate(ImageDelegate)
  */
-public interface ImageAssetDelegate {
+public interface ImageDelegate {
   Bitmap fetchBitmap(LottieImage asset);
 }
