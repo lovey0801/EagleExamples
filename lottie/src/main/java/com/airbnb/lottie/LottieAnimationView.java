@@ -69,7 +69,7 @@ public class LottieAnimationView extends AppCompatImageView {
                 }
             };
 
-    private final LottieDrawable lottieDrawable = new LottieDrawable();
+    protected final LottieDrawable lottieDrawable = new LottieDrawable();
     private CacheStrategy defaultCacheStrategy;
     private String animationName;
     private int lottieType;
@@ -345,7 +345,7 @@ public class LottieAnimationView extends AppCompatImageView {
 
         this.animationName = animationName;
         this.lottieType = lottieType;
-        lottieDrawable.cancelAnimation();
+//        lottieDrawable.cancelAnimation();
         cancelLoaderTask();
         lottieDrawable.setImagesFolder(imagesFolder);
 
