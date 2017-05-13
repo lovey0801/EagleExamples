@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#80000000">
 
-    <com.yibasan.lizhifm.LZLottieAnimationView
+    <com.airbnb.lottie.LottieAnimationExView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

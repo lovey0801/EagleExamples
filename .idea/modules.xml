@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EagleExamples.iml" filepath="$PROJECT_DIR$/EagleExamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Examples.iml" filepath="$PROJECT_DIR$/Examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lottie/lottie.iml" filepath="$PROJECT_DIR$/lottie/lottie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottie/lottie.iml" filepath="$PROJECT_DIR$/lottie/lottie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/svga-player/svga-player.iml" filepath="$PROJECT_DIR$/svga-player/svga-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/svga-player/svga-player.iml" filepath="$PROJECT_DIR$/svga-player/svga-player.iml" />
     </modules>
   </component>
